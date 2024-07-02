@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+h2 {
+  text-align: center;
+}
+.container {
+  width: 100vw;
+  background: rgb(24, 24, 24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80vh;
+}
+.box {
+  margin: 20px;
+  border: 2px solid rgba(172, 255, 47, 0.5);
+  background-color: rgba(172, 255, 47, 0.2);
+  border-radius: 10px;
+  min-width: 250px;
+  max-width: 500px;
+  /* animation: RevealOnScroll ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 100% cover 50%; */
+}
+.box-l {
+  animation: RevealOnScrollLeft ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 100% cover 50%;
+}
+.box-r {
+  animation: RevealOnScrollRigth ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 100% cover 50%;
+}
+h1,
+p {
+  color: rgba(245, 245, 245, 0.7);
+  padding: 10px;
+}
+@keyframes RevealOnScrollLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes RevealOnScrollRigth {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
